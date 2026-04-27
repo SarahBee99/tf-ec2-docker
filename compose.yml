@@ -21,7 +21,7 @@ services:
     volumes:
       - flame_data:/app/data
     environment:
-      - PASSWORD=my-secure-password
+      - PASSWORD=${FLAME_PASSWORD:-default-flame-password}
 
   # Dozzle
   dozzle:
