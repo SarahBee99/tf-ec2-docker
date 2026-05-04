@@ -1,6 +1,15 @@
 version: '3.8'
 
 services:
+ # Uptime Kuma
+  uptime-kuma:
+    image: louislam/uptime-kuma:1d
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - uptime-kuma-data:/app/data
 
   # Flame Dashboard
   flame-dashboard:
